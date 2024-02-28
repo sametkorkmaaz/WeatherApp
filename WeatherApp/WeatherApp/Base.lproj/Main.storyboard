@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light_background" translatesAutoresizingMaskIntoConstraints="NO" id="U29-e2-1qR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-a4-qus">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4dY-SM-xMQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKB-Fi-0cp">
+                                                <rect key="frame" x="0.0" y="-3" width="40" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="yue-WO-iGF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <imageReference key="backgroundImage" image="location.circle" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="konumluHaaDurumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ck-h4-A95"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ara" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hbm-0E-nst">
+                                                <rect key="frame" x="48" y="0.0" width="318" height="45"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TY-Xf-arS">
+                                                <rect key="frame" x="374" y="-2.5" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="2CG-FE-Ehf"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <imageReference key="backgroundImage" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="aramaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="shb-kq-q6a"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1TY-Xf-arS" firstAttribute="top" secondItem="SKB-Fi-0cp" secondAttribute="top" id="77A-OF-Mfi"/>
+                                            <constraint firstAttribute="bottom" secondItem="SKB-Fi-0cp" secondAttribute="bottom" id="9zh-vM-v7s"/>
+                                            <constraint firstItem="SKB-Fi-0cp" firstAttribute="top" secondItem="4dY-SM-xMQ" secondAttribute="top" id="RPs-0h-RQY"/>
+                                            <constraint firstAttribute="height" constant="45" id="aHm-hZ-Ist"/>
+                                            <constraint firstItem="SKB-Fi-0cp" firstAttribute="leading" secondItem="4dY-SM-xMQ" secondAttribute="leading" id="bOU-OU-6vv"/>
+                                            <constraint firstItem="1TY-Xf-arS" firstAttribute="bottom" secondItem="SKB-Fi-0cp" secondAttribute="bottom" id="eKn-yx-WiO"/>
+                                            <constraint firstAttribute="trailing" secondItem="1TY-Xf-arS" secondAttribute="trailing" id="kWZ-rV-k0w"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EMf-fD-8ts">
+                                        <rect key="frame" x="0.0" y="62" width="414" height="173"/>
+                                        <color key="tintColor" name="light_dark_mode"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="177.5" id="JiT-E1-UbC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-SL-g8P">
+                                        <rect key="frame" x="0.0" y="252.5" width="414" height="95.5"/>
+                                        <color key="tintColor" name="light_dark_mode"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95.5" id="OSA-Nu-86Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                        <color key="textColor" name="light_dark_mode"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Şehir" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoW-B4-vjJ">
+                                        <rect key="frame" x="0.0" y="363" width="414" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="stm-sw-tpE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" name="light_dark_mode"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a18-YM-crO">
+                                        <rect key="frame" x="0.0" y="414" width="414" height="400"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BoW-B4-vjJ" firstAttribute="top" secondItem="ecT-SL-g8P" secondAttribute="bottom" constant="15" id="1v8-hV-3n9"/>
+                                    <constraint firstItem="4dY-SM-xMQ" firstAttribute="leading" secondItem="tfV-a4-qus" secondAttribute="leading" id="3EE-bF-uVt"/>
+                                    <constraint firstItem="a18-YM-crO" firstAttribute="trailing" secondItem="BoW-B4-vjJ" secondAttribute="trailing" id="3w2-Qj-AOv"/>
+                                    <constraint firstAttribute="bottom" secondItem="a18-YM-crO" secondAttribute="bottom" id="8uq-hG-iLL"/>
+                                    <constraint firstItem="a18-YM-crO" firstAttribute="leading" secondItem="tfV-a4-qus" secondAttribute="leading" id="Jaz-H7-yZE"/>
+                                    <constraint firstAttribute="trailing" secondItem="4dY-SM-xMQ" secondAttribute="trailing" id="Lko-q0-4F0"/>
+                                    <constraint firstItem="EMf-fD-8ts" firstAttribute="trailing" secondItem="4dY-SM-xMQ" secondAttribute="trailing" id="PD4-sJ-Fd6"/>
+                                    <constraint firstItem="BoW-B4-vjJ" firstAttribute="trailing" secondItem="ecT-SL-g8P" secondAttribute="trailing" id="ZJj-8T-wQC"/>
+                                    <constraint firstAttribute="trailing" secondItem="a18-YM-crO" secondAttribute="trailing" id="fdA-Mh-st9"/>
+                                    <constraint firstItem="a18-YM-crO" firstAttribute="top" secondItem="BoW-B4-vjJ" secondAttribute="bottom" constant="15" id="kWD-2j-02R"/>
+                                    <constraint firstItem="EMf-fD-8ts" firstAttribute="top" secondItem="4dY-SM-xMQ" secondAttribute="bottom" constant="15" id="kpD-vs-9OE"/>
+                                    <constraint firstItem="ecT-SL-g8P" firstAttribute="top" secondItem="EMf-fD-8ts" secondAttribute="bottom" constant="15" id="qnq-qj-rMZ"/>
+                                    <constraint firstItem="ecT-SL-g8P" firstAttribute="trailing" secondItem="EMf-fD-8ts" secondAttribute="trailing" id="vfW-ob-ANK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U29-e2-1qR" secondAttribute="trailing" id="Ec6-HN-X0y"/>
+                            <constraint firstItem="tfV-a4-qus" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hna-El-qvo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tfV-a4-qus" secondAttribute="bottom" id="JNP-9O-sIW"/>
+                            <constraint firstAttribute="trailing" secondItem="tfV-a4-qus" secondAttribute="trailing" id="RqG-M3-yfg"/>
+                            <constraint firstAttribute="bottom" secondItem="U29-e2-1qR" secondAttribute="bottom" id="SDz-nF-NAW"/>
+                            <constraint firstItem="U29-e2-1qR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j1w-t2-Ova"/>
+                            <constraint firstItem="tfV-a4-qus" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mqP-1A-Twc"/>
+                            <constraint firstItem="U29-e2-1qR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zDF-1p-cnB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SehirLabel" destination="BoW-B4-vjJ" id="FgZ-nF-1qg"/>
+                        <outlet property="aramaTextField" destination="hbm-0E-nst" id="maj-JP-v30"/>
+                        <outlet property="dereceLabel" destination="ecT-SL-g8P" id="hMy-l2-ffN"/>
+                        <outlet property="havaDurumuImage" destination="EMf-fD-8ts" id="hIz-Ea-78T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26.086956521739133" y="3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud" catalog="system" width="128" height="87"/>
+        <image name="light_background" width="662" height="662"/>
+        <image name="location.circle" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="light_dark_mode">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
